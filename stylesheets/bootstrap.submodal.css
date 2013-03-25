@@ -29,7 +29,9 @@
     right: 0;
     bottom: 0;
 }
-
+.modal-header{
+    border-color: #ccc;
+}
 @media (max-width:767px){
     .sub-modal{
         left: 10%;    
