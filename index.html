@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bootstrap-submodal by jakiestfu</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Bootstrap-submodal</h1>
+        <p>Adds Sub-Modals to Bootstrap's Modals</p>
+
+        <p class="view"><a href="https://github.com/jakiestfu/Bootstrap-SubModal">View the Project on GitHub <small>jakiestfu/Bootstrap-SubModal</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/jakiestfu/Bootstrap-SubModal/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jakiestfu/Bootstrap-SubModal/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jakiestfu/Bootstrap-SubModal">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Bootstrap-SubModal</h1>
+
+<p>Add Sub-Modals to Bootstrap's Modals.</p>
+
+<p><img src="http://i.imgur.com/6M7xW7e.png"></p>
+
+<h2>HTML</h2>
+
+<p>Sub modals are added to the <code>.modal-body</code> element of a modal. It's HTML structure is identical excluding the following <strong>two differences</strong></p>
+
+<ul>
+<li>Sub Modals do not have a <code>.modal-header</code> element</li>
+<li>Sub Modals must have a class of <code>.sub-modal</code> (in addition to <code>.modal</code>)</li>
+</ul><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal hide fade"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>[...]<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+
+        <span class="c">&lt;!-- Your Sub Modal, requires sub-modal class --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal sub-modal hide"</span><span class="nt">&gt;</span>[...submodal content...]<span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;p&gt;</span>[parent modal content]<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>[...]<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<hr><h2>Data Attributes</h2>
+
+<p>This resembles Twitter Bootstrap's data API:</p>
+
+<p><strong>Opening</strong></p>
+
+<div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#mySubModal"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-toggle=</span><span class="s">"submodal"</span><span class="nt">&gt;</span>Open Sub Modal<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+
+<p><strong>Closing</strong></p>
+
+<div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#mySubModal"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-dismiss=</span><span class="s">"submodal"</span><span class="nt">&gt;</span>Close Sub Modal<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+
+<hr><h2>JS API</h2>
+
+<div class="highlight"><pre>
+<span class="c1">// Open</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#mySubModal'</span><span class="p">).</span><span class="nx">subModal</span><span class="p">(</span><span class="s1">'open'</span><span class="p">);</span>
+
+<span class="c1">// Close</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#mySubModal'</span><span class="p">).</span><span class="nx">subModal</span><span class="p">(</span><span class="s1">'close'</span><span class="p">);</span>
+
+<span class="c1">// Toggle</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#mySubModal'</span><span class="p">).</span><span class="nx">subModal</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">);</span>
+</pre></div>
+
+<hr><h2>Events</h2>
+
+<div class="highlight"><pre>
+<span class="c1">// Before Modal is Shown</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#mySubModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'beforeShow'</span><span class="p">,</span> <span class="nx">fn</span><span class="p">);</span>
+
+<span class="c1">// Modal Shown</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#mySubModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show'</span><span class="p">,</span> <span class="nx">fn</span><span class="p">);</span>
+
+<span class="c1">// Modal Closed</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#mySubModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">,</span> <span class="nx">fn</span><span class="p">);</span>
+</pre></div>
+
+<h3>Known Issues</h3>
+
+<p>Currently, there is a nasty overflow issue that may take a while to fix. Please reference the issues list.</p>
+
+<h3>License</h3>
+
+<p>MIT, dawg.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jakiestfu">jakiestfu</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
