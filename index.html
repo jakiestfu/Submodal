@@ -13,8 +13,78 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+    /* Demo Styles */
+    .demo-modal form .btn-mini{
+        margin: 4px 0;
+    }
+    .demo-modal form p, .control-label{
+        font-size: 12px;
+        color: #888;
+    }
+    .center{
+        text-align: center;
+    }
+    .sub-modal form{
+        margin: 0;
+    }
+  </style>
   </head>
   <body>
+  
+  <!-- Modal -->
+  <div id="demoModal" class="modal hide fade demo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Your Account</h3>
+    </div>
+    <div class="modal-body">
+        
+        <!-- Sub-Modal -->
+        <div id="mySubModal" class="modal sub-modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-body">
+                <p class="center">Are you sure you want to close your account?<br />You won't be able to undo this.</p>
+                <hr />
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail">Confirm Your Password: </label>
+                        <div class="controls">
+                            <input type="text">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="submodal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-danger" data-dismiss="submodal">Close Account</button>
+            </div>
+        </div>
+        
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Your Account</label>
+            <div class="controls">
+              <a href="#mySubModal" role="button" class="btn btn-mini" data-toggle="submodal">Close my account…</a>
+              <p>By closing your account, you will lose access to your financial data and your keys will be expired. This action is irreversible.</p>
+            </div>
+          </div>
+            <hr />
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Your Account</label>
+            <div class="controls">
+              <a href="#mySubModal" role="button" class="btn btn-mini" data-toggle="submodal">Close my account…</a>
+              <p>By closing your account, you will lose access to your financial data and your keys will be expired. This action is irreversible.</p>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+          <button class="btn btn-primary" data-dismiss="modal">Done</button>
+      </div>
+  </div>
+  
+  
     <div class="wrapper">
       <header>
         <h1>Bootstrap-submodal</h1>
@@ -34,7 +104,7 @@
 
 <p>Add Sub-Modals to Bootstrap's Modals.</p>
 
-<p><img src="http://i.imgur.com/6M7xW7e.png"></p>
+<p><a href="#demoModal" role="button" class="btn btn-success btn-block" data-toggle="modal">View Demo</a> </p>
 
 <h2>HTML</h2>
 
