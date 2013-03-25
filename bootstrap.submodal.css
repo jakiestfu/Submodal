@@ -12,12 +12,12 @@
     -moz-border-top-right-radius: 0;
     border-top-right-radius: 0;
     
+    background: -webkit-linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0) 4px);
+    background: -moz-linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0) 4px);
+    background: -ms-linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0) 4px);
+    background: -o-linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0) 4px);
+    background: linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0) 4px);
     background-color: #fff;
-    background-image: -webkit-linear-gradient(#fff, #ecf0f4);
-    background-image: -moz-linear-gradient(#fff, #ecf0f4);
-    background-image: -ms-linear-gradient(#fff, #ecf0f4);
-    background-image: -o-linear-gradient(#fff, #ecf0f4);
-    background-image: linear-gradient(#fff, #ecf0f4);
 }
 .sub-modal .modal-header{
     display: none;
@@ -29,7 +29,9 @@
     right: 0;
     bottom: 0;
 }
-
+.modal-header{
+    border-color: #ccc;
+}
 @media (max-width:767px){
     .sub-modal{
         left: 10%;    
