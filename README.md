@@ -3,7 +3,7 @@ Bootstrap-SubModal
 
 Add Sub-Modals to Bootstrap's Modals.
 
-<img src="http://i.imgur.com/6M7xW7e.png">
+<img src="http://i.imgur.com/dUrRQfa.png">
 
 
 ## HTML
