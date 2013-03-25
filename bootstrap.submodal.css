@@ -12,6 +12,9 @@
     -moz-border-top-right-radius: 0;
     border-top-right-radius: 0;
 }
+.sub-modal .modal-header{
+    display: none;
+}
 .sub-modal-backdrop{
     position: absolute;
     top: 0;
