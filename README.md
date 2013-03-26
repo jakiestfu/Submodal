@@ -75,4 +75,4 @@ Currently, there is a nasty overflow issue that may take a while to fix. Please 
 
 MIT, dawg.
 
-<img src="http://i.imgur.com/9IhCklp.jpg">
+<a href="https://twitter.com/grantmnz/status/316438440348622848"><img src="http://i.imgur.com/9IhCklp.jpg"></a>
