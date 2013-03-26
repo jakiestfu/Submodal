@@ -5,7 +5,6 @@ Add Sub-Modals to Bootstrap's Modals.
 
 <img src="http://i.imgur.com/dUrRQfa.png">
 
-
 ## HTML
 
 Sub modals are added to the `.modal-body` element of a modal. It's HTML structure is identical excluding the following **two differences**
@@ -75,3 +74,5 @@ Currently, there is a nasty overflow issue that may take a while to fix. Please 
 ### License
 
 MIT, dawg.
+
+<img src="http://i.imgur.com/9IhCklp.jpg">
