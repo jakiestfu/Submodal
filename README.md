@@ -1,28 +1,54 @@
-Bootstrap-SubModal
+Bootstrap Submodal
 ==================
 
-Add Sub-Modals to Bootstrap's Modals.
+Add Submodals to Bootstrap's Modals.
 
-<img src="http://i.imgur.com/dUrRQfa.png">
+<img src="http://i.imgur.com/Jr9RRqq.png">
+
+## Installing
+You can install Bootstrap Submodal via bower
+```bash
+$ bower install submodal
+```
+Then include the JS and CSS in your page.
+```html
+<link rel="stylesheet" type="text/css" href="bs.sm.css">
+<script type="text/javascript" src="bs.sm.js"></script>
+```
+
+## Building
+```bash
+$ npm install
+$ npm run-script bower
+$ npm run-script build
+
+# For watching
+$ npm run-script build-watch
+```
+
 
 ## HTML
 
-Sub modals are added to the `.modal-body` element of a modal. It's HTML structure is identical excluding the following **two differences**
+Submodals are added to the `.modal-body` element of a modal. It's HTML structure is identical to regular modals excluding the following **two differences**
 
 * Sub Modals do not have a `.modal-header` element
-* Sub Modals must have a class of `.sub-modal` (in addition to `.modal`)
+* Sub Modals must have a class of `.submodal` (in addition to `.modal`)
 
 ```html
-<div class="modal hide fade">
-    <div class="modal-header">[...]</div>
-    <div class="modal-body">
-    
-        <!-- Your Sub Modal, requires sub-modal class -->
-        <div class="modal sub-modal hide">[...submodal content...]</div>
-        
-        <p>[parent modal content]</p>
+<div class="modal">
+    <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">[...]</div>
+            <div class="modal-body">
+
+                <!-- Your Sub Modal, requires sub-modal class -->
+                <div class="modal submodal">[...submodal content...]</div>
+
+                <p>[parent modal content]</p>
+            </div>
+            <div class="modal-footer">[...]</div>
+        </div>
     </div>
-    <div class="modal-footer">[...]</div>
 </div>
 ```
 <hr />
@@ -32,12 +58,12 @@ This resembles Twitter Bootstrap's data API:
 
 **Opening**
 ```html
-<a href="#mySubModal" class="btn" data-toggle="submodal">Open Sub Modal</a>
+<a href="#my-submodal" class="btn" data-toggle="submodal">Open Submodal</a>
 ```
 
 **Closing**
 ```html
-<a href="#mySubModal" class="btn" data-dismiss="submodal">Close Sub Modal</a>
+<a href="#my-submodal" class="btn" data-dismiss="submodal">Close Submodal</a>
 ```
 <hr />
 ## JS API
@@ -45,28 +71,36 @@ This resembles Twitter Bootstrap's data API:
 ```javascript
 
 // Open
-$('#mySubModal').subModal('open');
+$('#my-submodal').submodal('open');
 
 // Close
-$('#mySubModal').subModal('close');
+$('#my-submodal').submodal('close');
 
 // Toggle
-$('#mySubModal').subModal('toggle');
+$('#my-submodal').submodal('toggle');
 ```
 <hr />
 ## Events
 
 ```javascript
 
-// Before Modal is Shown
-$('#mySubModal').on('beforeShow', fn);
+// Before submodal is shown
+$('#my-submodal').on('beforeShow', fn);
 
-// Modal Shown
-$('#mySubModal').on('show', fn);
+// After submodal shown
+$('#my-submodal').on('show', fn);
 
-// Modal Closed
-$('#mySubModal').on('hide', fn);
+// Before submodal is hidden
+$('#my-submodal').on('beforeHide', fn);
+
+// After submodal Closed
+$('#my-submodal').on('hide', fn);
 ```
+
+### Upgrading
+There are some things to note when upgrading to the v2.0 version
+* Only supports Bootstrap 3.x
+* The `subModal` namespace has been renamed to `submodal`
 
 ### Known Issues
 Currently, there is a nasty overflow issue that may take a while to fix. Please reference the issues list.

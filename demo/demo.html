@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Submodal Demo</title>
+
+    <script type="text/javascript" src="./components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../dist/bs.sm.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/bs.sm.css">
+
+    <style type="text/css">
+        /* Demo Styles */
+        body { padding: 30px; }
+        form .btn-xs { margin: 4px 0; }
+        form p, .control-label {
+            display: block;
+            padding-top: 4px !important;
+            }
+        .sub-modal form { margin: 0; }
+        .no-padding { pading: 0; }
+        .text-center { text-align: center; }
+    </style>
+
+</head>
+<body>
+
+    <a href="#my-modal" class="btn btn-default" data-toggle="modal">Show Modal</a>
+
+    <div class="modal fade" id="my-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </a>
+                    <h4 class="modal-title">Your Account</h4>
+                </div>
+
+                <div class="modal-body">
+
+
+                    <!-- SUBMODAL -->
+                    <div class="modal submodal" id="my-submodal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <p class="text-center">Are you sure you want to close your account?<br />You won't be able to undo this.</p>
+                                    <hr />
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label" for="pass">Password:</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" class="form-control" id="pass">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-default" data-dismiss="submodal" aria-hidden="true">Cancel</button>
+                                    <button class="btn btn-danger" data-dismiss="submodal">Close Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /SUBMODAL -->
+
+
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Your Account</label>
+                            <div class="col-sm-8">
+                                <a href="#my-submodal" role="button" class="btn btn-default btn-xs" data-toggle="submodal">Close my account...</a>
+                                <p>By using a submodal to do somehting as serious to close an account, you suck at UX, Jacob</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Your Account</label>
+                            <div class="col-sm-8">
+                                <a href="#my-submodal" role="button" class="btn btn-default btn-xs" data-toggle="submodal">Close my account...</a>
+                                <p>By using a submodal to do somehting as serious to close an account, you suck at UX, Jacob</p>
+                            </div>
+                        </div>
+                    </form>
+
+                </div> <!-- /.modal-body -->
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#my-submodal')
+                .on('beforeShow', function() { console.log('Submodal beforeShow event'); })
+                .on('show', function() { console.log('Submodal show event'); })
+                .on('beforeHide', function() { console.log('Submodal beforeHide event'); })
+                .on('hide', function() { console.log('Submodal hide event'); });
+
+        });
+    </script>
+</body>
+</html>
