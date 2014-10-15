@@ -1,0 +1,8 @@
+{
+	"evil": true,
+	"curly": true,
+	"eqnull": false,
+	"browser": true,
+	"loopfunc": true,
+	"globals": {}
+}
