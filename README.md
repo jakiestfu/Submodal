@@ -1,7 +1,7 @@
 Bootstrap Submodal
 ==================
 
-Add Submodals to Bootstrap's Modals.
+Add Submodals to Bootstraps Modals.
 
 <img src="http://i.imgur.com/Jr9RRqq.png">
 
@@ -12,7 +12,7 @@ $ bower install submodal
 ```
 Then include the JS and CSS in your page.
 ```html
-<link rel="stylesheet" type="text/css" href="bs.sm.css">
+<link type="text/css" rel="stylesheet" href="bs.sm.css">
 <script type="text/javascript" src="bs.sm.js"></script>
 ```
 
@@ -87,13 +87,13 @@ $('#my-submodal').submodal('toggle');
 // Before submodal is shown
 $('#my-submodal').on('beforeShow', fn);
 
-// After submodal shown
+// After submodal is shown
 $('#my-submodal').on('show', fn);
 
 // Before submodal is hidden
 $('#my-submodal').on('beforeHide', fn);
 
-// After submodal Closed
+// After submodal is hidden
 $('#my-submodal').on('hide', fn);
 ```
 
