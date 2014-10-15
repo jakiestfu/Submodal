@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         js_path = 'src/*.js',
         css_path = 'src/*.css',
 
-        banner = "/*! Bootstrap Submodal v<%= pkg.version %> */";
+        banner = "/*! Submodal v<%= pkg.version %> */";
 
     grunt.initConfig({
 

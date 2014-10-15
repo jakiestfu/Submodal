@@ -1,12 +1,12 @@
-Bootstrap Submodal
+Submodal
 ==================
 
-Add Submodals to Bootstraps Modals.
+Add Submodals to Bootstrap 3.x modals.
 
 <img src="http://i.imgur.com/Jr9RRqq.png">
 
 ## Installing
-You can install Bootstrap Submodal via bower
+You can install Submodal via bower
 ```bash
 $ bower install submodal
 ```
