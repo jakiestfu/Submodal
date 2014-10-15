@@ -1,7 +1,7 @@
 Submodal
 ==================
 
-Add Submodals to Bootstrap 3.x modals.
+Add submodals to Bootstrap 3.x modals
 
 <img src="http://i.imgur.com/Jr9RRqq.png">
 
