@@ -70,11 +70,11 @@ This resembles Twitter Bootstrap's data API:
 
 ```javascript
 
-// Open
-$('#my-submodal').submodal('open');
+// Show
+$('#my-submodal').submodal('show');
 
-// Close
-$('#my-submodal').submodal('close');
+// Hide
+$('#my-submodal').submodal('hide');
 
 // Toggle
 $('#my-submodal').submodal('toggle');
